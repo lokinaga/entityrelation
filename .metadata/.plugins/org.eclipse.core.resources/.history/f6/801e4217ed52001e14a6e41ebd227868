@@ -1,0 +1,12 @@
+package com.security1;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+@RestController
+public class Security1Controller {
+	
+	@GetMapping(value="/getValue")
+	public String getValue() {
+		return "hello world";
+	}
+}

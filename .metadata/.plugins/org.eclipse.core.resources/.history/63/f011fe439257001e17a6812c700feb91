@@ -1,0 +1,5 @@
+package com.scopeofbean.entity;
+
+public class Employee {
+
+}

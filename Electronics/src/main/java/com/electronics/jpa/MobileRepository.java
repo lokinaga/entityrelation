@@ -1,0 +1,19 @@
+package com.electronics.jpa;
+
+import java.util.List;
+
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.electronics.entity.Mobile;
+
+public interface MobileRepository extends JpaRepository<Mobile, Integer>{
+    @Query(value= "select * from mob_details where brand like ?" , nativeQuery = true)
+	List<Mobile> findByBrand(String b);
+    @Query(value= "select * from mob_details where ram like ? " ,nativeQuery = true)
+	List<Mobile> findByRam(int c);
+    @Query(value= "select * from mob_details where price  >= ? and price <= ?",nativeQuery = true)
+	List<Mobile> findByRange(int d, int e);
+
+}

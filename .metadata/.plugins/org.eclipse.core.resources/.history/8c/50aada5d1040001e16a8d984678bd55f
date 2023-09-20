@@ -1,0 +1,17 @@
+package com.webapp;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class WebController {
+	@RequestMapping(path ="/msg")
+	public String  getMessage() {
+		return "hello world";
+	}
+	@RequestMapping(path = "/msg") 
+	public String getName() {
+		return "Lokesh";
+	}
+
+}

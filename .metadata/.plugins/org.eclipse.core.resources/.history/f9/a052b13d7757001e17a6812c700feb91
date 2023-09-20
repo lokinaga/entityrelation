@@ -1,0 +1,22 @@
+package com.log;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.log.controller.log4jController;
+
+@SpringBootTest
+class Log4jApplicationTests {
+	@Autowired
+	log4jController lc;
+
+	@Test
+	void contextLoads() {
+	}
+	@Test
+	public void testCase() {
+		assertNot(lc.getmsg(),"Hi welcome");
+	}
+
+}
